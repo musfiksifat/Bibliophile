@@ -1,0 +1,67 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    --web-scale-on-resize: true;
+    --web-enable-deep-linking: true;
+}
+
+img {
+    height: 100px;
+}
+
+h1 {
+    color:#7CA2B4;
+}
+
+.Navbar_light {
+    background:#98B188;
+    width:100%;
+}
+.Navbar_Title {
+    margin-left: 50px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: "Algerian";
+    font-style: normal;
+    font-size: 35px;
+    text-decoration:none;
+    color: #ECFBEF;
+}
+.Popular_books {
+    padding-right: 30px;
+    white-space: nowrap;
+    text-align: left;
+    list-style-type: none;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-size: 20px;
+    text-decoration:none;
+    color: rgba(255,255,255,0.918);
+}
+.Novels {
+    padding-right: 30px;
+    white-space: nowrap;
+    text-align: left;
+    list-style-type: none;
+    font-family: Segoe UI;
+    font-style: normal;
+
+    font-size: 20px;
+    text-decoration:none;
+    color: rgba(255,255,255,0.918);
+}
+.Profile {
+    padding-right: 30px;
+    list-style-type: none;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-size: 20px;
+    text-decoration:none;
+    color:#FFFFFF;
+}
+.Nav_list_items{
+    color: white;
+    text-decoration: none;
+}
+
+
