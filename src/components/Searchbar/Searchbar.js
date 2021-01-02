@@ -32,16 +32,23 @@ const Searchbar=(props)=>{
                                 style={{backgroundColor: '#98B188'}}
                                 type='submit'
                                 onClick={() => {
-                                    props.sorter('relevance')
+                                    props.sorter('oldest')
                                 }}
                             >Oldest</Button>
                             <Button
                                 style={{backgroundColor: '#98B188'}}
                                 type='submit'
                                 onClick={() => {
-                                    props.sorter('relevance')
+                                    props.sorter('ascending')
                                 }}
-                            >Most Relevant</Button>
+                            > A - Z </Button>
+                            <Button
+                                style={{backgroundColor: '#98B188'}}
+                                type='submit'
+                                onClick={() => {
+                                    props.sorter('descending')
+                                }}
+                            > Z - A </Button>
                         </ButtonGroup>
 
                     </form>

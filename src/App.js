@@ -1,4 +1,4 @@
-import React,{useState} from "react"
+import React,{useState,useEffect} from "react"
 import Navbar from "./components/Navbar/Navbar";
 import Searchbar from "./components/Searchbar/Searchbar";
 import {getBooksByTerm} from "./api/GoogleBook";
@@ -10,13 +10,11 @@ import "./components/Navbar/style.css"
 
 
 const App=()=>{
-
-
   const [searchTerm,setSearchTerm]=useState("")
   const [books,setBooks]=useState([])
   const [currentPage,setCurrentPage]=useState(1)
   const [totalPages,setTotalPages]=useState(0)
-  const [sortTerm, setSortTerm] = useState('relevance');
+  const [sortTerm, setSortTerm] = useState('newest');
 
   const handleSubmit=async(event)=>{
     event.preventDefault()
@@ -30,7 +28,7 @@ const App=()=>{
   const nextPage = async (pageNumber) => {
 
     setCurrentPage(pageNumber);
-    await getBooksByTerm(searchTerm, setBooks, setTotalPages, currentPage);
+    await getBooksByTerm(searchTerm, setBooks, setTotalPages, currentPage,sortTerm);
   }
 
   return(
@@ -39,7 +37,6 @@ const App=()=>{
         <Searchbar handleChange={handleChange} handleSubmit={handleSubmit} sorter={setSortTerm}/>
 
         <BookList books={books}/>
-        <div></div>
 
         {totalPages>1?
             <Pagination

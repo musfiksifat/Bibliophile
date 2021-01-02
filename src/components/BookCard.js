@@ -12,26 +12,28 @@ const Book = (props) => {
         ImageURL = props.data.volumeInfo.imageLinks.thumbnail;
     }
     return (
-        <div className="col s13 m4" style={{ width:'350px', height:'650px'}}>
+        <div className="col s13 m4" style={{ width:'280px', height:'650px'}}>
             <div className="card">
                 <div classname="card-image">
                     {ImageURL == null ? (
                         <CardImg
                             src="https://picsum.photos/200/300"
                             alt=""
-                            style={{ width: "280px", height: "280px" ,paddingLeft:'50px'}}
+                            style={{ width: "280px", height: "280px" }}
                         />
                     ) : (
                         <img
                             src={ImageURL}
                             alt=""
-                            style={{ width: "280px", height: "280px",paddingLeft:'50px'}}
+                            style={{ width: "280px", height: "280px"}}
                         />
                     )}
                 </div>
                 <div className="card-content">
                     <p><b>{props.data.volumeInfo.title} </b></p>
                     By {props.data.volumeInfo.authors}
+                    <p><b>{'Date: '} </b>
+                        {props.data.volumeInfo.publishedDate}</p>
                 </div>
 
                 <div className="card-action" style={{height:'100px'}}>

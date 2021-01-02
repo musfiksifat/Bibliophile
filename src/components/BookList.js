@@ -5,8 +5,8 @@ import {CardImg} from "reactstrap";
 const BookList = (props)=>{
     return(
         <div className="container">
-            <div className="row" >
-                <div className="col s13" style={{marginTop:'50px', columnCount:'3'}}>
+            <div className="column" >
+                <div className="col s13" style={{marginTop:'100px', columnCount:'3'}}>
                     {props.books.map((book,i)=>{
                         return (<Book data={book} key={i}/>)
                     })}
